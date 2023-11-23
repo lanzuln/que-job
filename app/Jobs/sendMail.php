@@ -28,8 +28,7 @@ class sendMail implements ShouldQueue {
         // $user=User::all();
 
         // $email = new RegisterMail();
-
-        Mail::to($this->request->email)->send(new RegisterMail($this->validData));
+        Mail::to($this->validData['email'])->send(new RegisterMail($this->validData));
         Mail::to('lanzu@gmail.com')->send(new RegisterData($this->allData));
     }
 }

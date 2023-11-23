@@ -26,7 +26,7 @@
         <tbody>
             @foreach ($allData as $index => $single)
           <tr>
-            <th>{{ $index + 1 }}</th>
+            <th>{{ ++$index }}</th>
             <td>{{ $single->name }}</td>
             <td>{{ $single->email }}</td>
           </tr>
